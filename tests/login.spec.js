@@ -10,13 +10,13 @@ test("Valid Login Test", async function ({ page }) {
   await page.getByPlaceholder("Password").fill("admin123");
   await page.locator("//button[normalize-space()='Login']").click();
 
-  await page.waitForTimeout(5000);
+  await page.waitForTimeout(2000);
   await expect(page).toHaveURL(/dashboard/);
 
   //Logout from the application
   await page.locator("//img[@class='oxd-userdropdown-img']").click();
   await page.getByText("Logout").click();
 
-  await page.waitForTimeout(5000);
+  await page.waitForTimeout(2000);
   await expect(page).toHaveURL(/login/);
 });
