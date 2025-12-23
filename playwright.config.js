@@ -40,6 +40,9 @@ export default defineConfig({
       use: {
         ...devices["Desktop Chrome"],
         viewport: { width: 1528, height: 864 },
+        // screenshot: "on",
+        // video: "on",
+        // trace: "on",
       },
     },
 
